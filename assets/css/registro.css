@@ -1,0 +1,291 @@
+/* CSS reset */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  
+}
+
+body {
+  margin: 10px;
+  background-color: #333;
+  justify-content: center;
+  margin-top: 250px;
+  background-image: url('/assets/img/paisagem.jpg'); 
+  background-size: 1920px 720px;
+  background-repeat:round;
+  background-attachment: fixed;
+}
+header {
+  width: 100%;
+ 
+  color: #e51c23;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  
+  position: fixed; 
+  top: 0; 
+}
+
+
+.content {
+  margin-top: 100px; 
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  transition: color 0.3s;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-left: 15%;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f76d57;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e51c23;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+a.links {
+  display: none;
+}
+
+
+.content {
+  width: 500px;
+  margin: 0px auto;
+  position: relative;
+}
+
+/* Formatando o cabeçalho dos formulários */
+h1 {
+  font-size: 48px;
+  color: #ff6600; 
+  padding: 10px 0;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+h1:after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: linear-gradient(left, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 0.8) 20%, rgba(255, 0, 0, 1) 53%, rgba(255, 0, 0, 0.8) 79%, rgba(255, 0, 0, 0) 100%); /* Vermelho Pokémon */
+}
+
+p {
+  margin-bottom: 15px;
+}
+p:first-child {
+  margin: 0px;
+}
+label {
+  color: #ff6600;
+  position: relative;
+}
+
+/* Estilos avançados de input */
+/* Placeholder */
+::-webkit-input-placeholder {
+  color: #ff6600; 
+  font-style: italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #ff6600;
+  font-style: italic;
+}
+input {
+  outline: none;
+}
+
+input:not([type="checkbox"]) {
+  width: 95%;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid #ff6600; 
+  -webkit-border-radius: 10px; 
+  border-radius: 10px; 
+  -webkit-box-shadow: 0 0 10px rgba(255, 102, 0, 0.4) inset; 
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.4) inset; 
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/* Estilo do botão de submit */
+input[type="submit"] {
+  width: 100%!important;
+  cursor: pointer;
+  background: #ff6600; 
+  padding: 8px 5px;
+  color: #333; 
+  font-size: 20px;
+  border: 1px solid #ff6600; 
+  margin-bottom: 10px;
+  text-shadow: 0 1px 1px #000; 
+  -webkit-border-radius: 10px; 
+  border-radius: 10px; 
+  transition: all 0.2s linear;
+}
+input[type="submit"]:hover {
+  background: #ffaa33; 
+}
+
+/* Marcando os links para mudar de um formulário para outro */
+.link {
+  position: absolute;
+  background: #ff6600; 
+  color: #333; 
+  left: 0px;
+  height: 20px;
+  width: 440px;
+  padding: 17px 30px 20px 30px;
+  font-size: 16px;
+  text-align: right;
+  border-top: 1px solid #ffaa33; 
+  -webkit-border-radius: 0 0 10px 10px; 
+  border-radius: 0 0 10px 10px; 
+}
+.link a {
+  font-weight: bold;
+  background: #ffaa33; 
+  padding: 6px;
+  color: #ff0000; 
+  margin-left: 10px;
+  border: 1px solid #ff0000; 
+  -webkit-border-radius: 10px; 
+  border-radius: 10px; 
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+.link a:hover {
+  color: #ff6600; 
+  background: #ff0000; 
+  border: 1px solid #ff0000; 
+}
+
+/* Estilos para ambos os formulários */
+#cadastro,
+#login {
+  position: absolute;
+  top: 0px;
+  width: 88%;
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: #000; 
+  border: 1px solid #ff0000; 
+  -webkit-box-shadow: 0 0 10px rgba(255, 102, 0, 0.4); 
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.4); 
+  border-radius: 10px; 
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+#paracadastro:target ~ .content #cadastro,
+#paralogin:target ~ .content #login {
+  z-index: 2;
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+#registro:target ~ .content #login,
+#paralogin:target ~ .content #cadastro {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+/* fadeInLeft */
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* fadeOutLeft */
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+#cadastro,
+#login {
+  position: absolute;
+  top: 0px;
+  width: 88%;
+  padding: 18px 6% 60px 6%;
+  margin: 0 0 35px 0;
+  background: rgba(255, 255, 255, 0.959); 
+  border: 1px solid #ff0000; 
+  -webkit-box-shadow: 0 0 10px rgba(255, 102, 0, 0.4); 
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.4); 
+  border-radius: 10px; 
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
